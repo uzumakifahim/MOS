@@ -1,0 +1,1207 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mastery of self App</title>
+    <link rel="stylesheet" href="jquery.mobile-1.4.5/jquery.mobile-1.4.5.css" />
+  
+	
+	
+    <script src="js/jquery-1.11.2.min.js" type="text/javascript"></script>
+    <script src="jquery.mobile-1.4.5/jquery.mobile-1.4.5.js" type="text/javascript"></script>
+	 
+    <meta name="viewport" content="width=device-width"/>
+    
+    <style type="text/css">
+		.ui-icon-question:after {
+	        background-image: url("images/ques-18.jpg");
+	         background-size:18px 18px;   
+	            
+               }
+    
+    </style>
+    
+</head>
+<body>
+	<!-- This is the first page -->
+    <section id="welcome-page" data-role="page">
+        
+        <div class="ui-content welcome">
+            <h1>Mastery of self</h1>
+            <blockquote><h4><i>"Winning is beginnig. <br> Beginning is half done."</i></h4></blockquote>
+           <a href="#create-act" class="ui-btn ui-btn-inline">Next</a>
+        </div>
+        
+    </section>
+    
+    
+    <!-- This is the second page -->
+    <div id="create-act" data-role="page">
+        
+        <div class="ui-content">
+            <p>Create your account</p>
+           <div data-role="controlgroup" data-type="vertical">
+				<a href="#email" class="ui-btn">Email</a>
+				<a href="#gmail" class="ui-btn">Gmail</a>
+				<a href="#facebook" class="ui-btn">Facebook</a>
+            </div>
+            <a href="#" data-rel="back" class="ui-btn ui-btn-inline">Back</a>
+                
+            <a href="#asked-attend"  class="ui-btn ui-btn-inline">Skip</a>
+        </div>
+    </div>
+    
+    <div id="email" data-role="page">
+		<div data-role="header">
+		    <h1>Email</h1>
+		</div>
+         <div class="ui-content">
+              <form method="get" action="demo.php">
+                 <label for="name">Your name:</label>
+                 <input type="text" name="name" id="name" value="" placeholder="Your Name">
+                 
+                 <label for="age">Your age:</label>
+                 <input type="number" name="age" id="age" value="" placeholder="Your Age">
+                 
+                 <label for="birthdate">Birthdate</label>
+                 <input type="date" name="birthdate" id="birthdate" value="" placeholder="Your Birthdate">
+                 
+                 <a href="#" data-rel="back" class="ui-btn ui-btn-inline">Back</a>
+                 <input data-inline="true" type="submit" value="Sign up">
+                 <a href="#asked-attend" class="ui-btn ui-btn-inline">Skip</a>
+<!--
+                 <a href="#asked-attend"><button data-inline="true">Skip</button></a>
+-->
+                 
+              </form>
+         
+         </div>     
+     
+    
+    </div>  <!-- Email Form -->
+    
+    <div id="gmail" data-role="page">
+       <div data-role="header">
+          <h1>Gmail</h1>
+       </div>
+       <div class="ui-content">
+		   <form method="get" action="gmail.php">
+			  <label for="username">Username:</label>
+			  <input type="text" name="username" id="username1" value="" placeholder="Username">
+			  
+			  <label for="password">Password:</label>
+			  <input type="password" name="password" id="password1" value="" placeholder="Password">
+			  
+			   <a href="#" data-rel="back" class="ui-btn ui-btn-inline">Back</a>
+                 <input data-inline="true" type="submit" value="Sign in">
+                 <a href="#asked-attend" class="ui-btn ui-btn-inline">Skip</a>
+		   </form>
+       </div>
+    </div>
+
+	<div id="facebook" data-role="page">
+       <div data-role="header">
+          <h1>Facebook</h1>
+       </div>
+       <div class="ui-content">
+		   <form method="get" action="fb.php">
+			  <label for="username">Username:</label>
+			  <input type="text" name="username" id="username2" value="" placeholder="Username">
+			  
+			  <label for="password">Password:</label>
+			  <input type="password" name="password" id="password2" value="" placeholder="Password">
+			  
+			  <a href="#" data-rel="back" class="ui-btn ui-btn-inline">Back</a>
+                 <input data-inline="true" type="submit" value="Sign in">
+                 <a href="#asked-attend" class="ui-btn ui-btn-inline">Skip</button></a>
+		   </form>
+		</div>
+    </div>
+    
+    <div id="asked-attend" data-role="page" data-dialog="true">
+              
+            <div class="ui-content">
+                <p>Did you attend the playshop?</p>
+                <a href="#yes" class="ui-btn ui-btn-inline">Yes</a>
+                <a href="#no" class="ui-btn ui-btn-inline">No</a>
+            </div>
+    
+    </div> <!--Attend playshop-->
+    
+    <div id="no" data-role="page" data-dialog="true" data-close-btn="right">
+		<div data-role="header">
+		  <h1>Requesting</h1>
+		</div>
+       <div class="ui-content">
+           <p>Please Attend!!!</p>
+       </div>
+    
+    </div>
+    
+    <div id="yes" data-role="page" data-dialog="true">  
+        <div class="ui-content">
+          
+           <p>Please keep your MS-Workbook by your side while setting up the app. It will give you better understanding of using 
+           the app.</p>
+          
+            <a href="#here" class="ui-btn ui-btn-inline">It's already here</a>
+            <a href="#later" class="ui-btn ui-btn-inline">Later</a>
+       </div>
+       
+    </div> <!-- MS-Workbook-->
+    
+      <div id="later" data-role="page" data-dialog="true" data-close-btn="right">
+		   <div data-role="header">
+		  <h1></h1>
+		</div> 
+        <div class="ui-content" >
+          
+           <p>You cannot proceed.</p>
+          
+            
+       </div>
+       
+    </div> <!-- MS-Workbook-->
+    
+    
+    <div id="here" data-role="page"> 
+	  <div data-role="header">
+			<h1></h1>
+		   
+		<a href="#pse-pop" class="ui-btn-right" id="open_popup" data-role="button" data-inline="true" data-rel="popup" data-transition="pop" data-position-to="window"> Help </a>
+		      <div data-role="popup" id="pse-pop">
+				  <div data-role="content">
+					  
+		            <p>A goal is an outcome that can be achieved. A purpose is the reason why we wish to
+					achieve our goals, our motivation for getting them done. Purpose sentence is a sentence that can inspire you throughout the 
+					whole journey of your life. It could be a quote of your favourite or Ideal Person. <br> <br>
+					<b>More examples are given on page 8-11 of MS-workbook.</b></p><br> <br>
+           
+					
+		            <a href="#foo" data-role="button" data-theme="c" data-rel="close"> Ok! I got it </a>
+		        </div>
+		        
+		          
+		   
+		     </div> <!--popupExample-->
+		     
+		     
+		</div> <!--header-->
+		
+        <div class="ui-content">
+          <div class="ui-field-contain">
+			<form method="get" action="ps-post.php">  
+             <label for="pupose-sentence">Enter your purpose sentence</label>
+             
+             
+             <textarea id="purpose-statement"></textarea>
+             <input data-inline="true" type="submit" value="Submit">
+             <a href="#ps-page" class="ui-btn ui-btn-inline">Skip</a>
+            </form> 
+            
+          </div>
+          
+       </div>
+       
+    </div> <!--enter purpose sentence page-->
+    
+   
+    <div id="pur-find" data-role="page">  
+		
+		<div data-role="header">
+			<h1>Purpose finder exercise</h1>
+		   
+		</div> 
+		
+        <div class="ui-content">
+                 
+                    <h3>1. What do I love to do?</h3>
+					<form method="get" action="psfe.php">
+					  
+						<textarea id="love" style="height:95px;" placeholder=" What do I enjoy, what do I look forward to, what is my secret dream? "></textarea>
+						<input data-inline="true" value="Submit" type="submit">
+				     </form>         		  
+						
+							
+							<h3>2. What am I good at?</h3>
+							  <form method="get" action="psfe.php">
+						         <textarea id="good-at" placeholder=" What do people raise me for, where have I excelled in the past, what are my natural talents? "></textarea>
+						         <input data-inline="true" value="Submit" type="submit">
+						      </form>
+						
+						
+							<h3>3. What is important to me?</h3>
+							  <form method="get" action="psfe.php">
+						         <textarea id="important" placeholder=" What do I stand for, what won't I stand for, what would I stand for? "></textarea>
+						         <input data-inline="true" value="Submit" type="submit">
+						      </form>   
+						
+                          <a href="#" class="ui-btn ui-btn-inline" data-rel="back">Ok!</a>
+                          <a href="#later-pstex" class="ui-btn ui-btn-inline">Later</a>
+         </div>
+          
+       </div>   <!----pse-help--->
+       
+         <div id="later-pstex" data-role="page" data-dialog="true">
+             <div class="ui-content">
+                  <p>Have you found out your purpose yet?</p>
+                  
+                   <a href="#reqst" class="ui-btn ui-btn-inline">Yes</a>
+                   <a href="#later" class="ui-btn ui-btn-inline">No</a>
+             </div>
+          
+         </div> <!--later-pstex-->
+         
+         
+          <div id="reqst" data-role="page" data-dialog="true">
+             <div class="ui-content">
+                  <p>Please write in details about your purpose. If you can't, then atleast write a few words.</p>
+                  
+                   <a href="#ps-page" class="ui-btn ui-btn-inline">Ok!</a>
+             </div>
+          
+         </div> <!--later-pstex-->
+         
+         
+    
+    <div id="ps-page" data-role="page">  
+		
+		<div data-role="header">
+			<h1></h1>
+		 <a href="#pst-pop" class="ui-btn-right" id="open_popup" data-role="button" data-inline="true" data-rel="popup" data-transition="pop" data-position-to="window"> Help </a>
+		      <div data-role="popup" id="pst-pop">
+				  <div data-role="content">
+					  
+		           <p>Purpose is our reason for being, the generator of our values and goals. Since the only way to head off
+					   self sabotage or variable motivation behind each goal there and focusing what we love, what we are good at,
+					   and what is important to us, we should develop a statement that explains us to us, from the inside out an 
+					   internal snap shot of our core motivation.
+                       <b>More examples are given on page 8-11 of MS-workbook.</b><br> <br>
+                       If you haven't find any purpose yet, you can find your purpose through the <a href="#pur-find">purpose finder exercise</a>.</p><br> <br>
+                       
+                       <a href="#foo" data-role="button" data-theme="c" data-rel="close"> Ok! I got it </a>
+		        </div>
+		        
+		          
+		   
+		     </div> <!--popupExample-->
+		       
+		            
+		        
+		</div> <!--header-->
+		
+        <div class="ui-content">
+          <div class="ui-field-contain">
+			<form method="get" action="psen-post.php">
+             <h2>Enter your purpose statement</h2>
+             
+             <a href="#det-pst" data-role="button">Write purpose in details (Recommended)</a>
+                  
+                  <div data-role="collapsible" data-collapsed-icon="carat-d" data-expanded-icon="carat-u" data-iconpos="right">
+                      <h1>Write purpose in a few words</h1>
+                      <textarea id="brief-pst" placeholder=" What? Why? What will it require of me? "></textarea>
+                       <input data-inline="true" value="Submit" type="submit">	
+                   </div>
+             
+            
+              
+             <p></p>
+             
+            <input data-inline="true" type="submit" value="Submit"> 
+            <a href="#fivebot-clicks" class="ui-btn ui-btn-inline">Next</a>
+           
+            </form>
+          </div>
+          
+       </div>
+       
+    </div>  <!--Purpose-statement-->
+    
+    
+    
+    <div id="det-pst" data-role="page">  
+		
+		<div data-role="header" data-position="fixed">
+			<h1>My Purpose</h1>
+			<a href="#" data-rel="back" data-icon="carat-l" data-iconpos="notext">Back</a>  
+		</div> 
+		
+        <div class="ui-content">
+		  <div class="pst-ask">	
+            <p>1. What is my purpose?</p>
+			  <textarea id="what"></textarea>
+			  <input data-inline="true" value="Submit" type="submit">
+			  
+		    <p>2. Why I chose this purpose? </p>
+			  <textarea id="why"></textarea>
+			  <input data-inline="true" value="Submit" type="submit">
+			  
+		    <p>3. What will it require of me? </p>
+			  <textarea id="being-fiveBot"></textarea>
+			  <input data-inline="true" value="Submit" type="submit">	
+			  
+		    </div> <!-- pst-ask -->	    
+		   
+           <a href="#fivebot-clicks" class="ui-btn ui-btn-inline">Next</a>
+		   	  
+          </div>
+           
+          
+       </div>
+       
+    </div> <!--pst-help-->
+    
+    <div id="fivebot-clicks" data-role="page">
+		<div data-role="header">
+		   <h1></h1>
+		</div>
+	   	
+       <div data-role="content">
+		  	
+         <a href="#fivebot-page" class="ui-btn ui-icon-carat-r ui-btn-icon-right">Enter your 5 year bottomlines</a>
+         
+          <a href="#need-help" id="open_popup" data-role="button" data-rel="popup" data-transition="pop" data-position-to="window"> Need Help </a>
+		      <div data-role="popup" id="need-help">
+				  <div data-role="content">
+					  
+		              <p> Results or goals that would help us live our purpose. Since balance is a key ingredient in a happy, successful life,
+					    we can devide our lives into the catagories of being, body, brain, people, time & money. Goals or outcomes that 
+					   we dedicate ourselves to achieving in these categories will vary, but ensure that they are all represented. Select
+					   bottom lines for five years that are challenging and stimulating, and then coming month (in the same catagories).
+					   These one month goals should be a first step toward reaching the five year destination.<br>
+					   <b>Find it on page 12-14 of MS-workbook.</b> </p><br><br>
+         
+                       <a href="#foo" data-role="button" data-theme="c" data-rel="close"> Ok! I got it </a>
+		          </div>
+		        
+		          
+		   
+		     </div> <!--popupExample-->
+          
+        </div> <!--content-->
+        
+       
+    
+    </div>  <!--5 bot clicks page-->
+       
+    <div id="fivebot-page" data-role="page">
+       <header data-role="header" data-position="fixed">
+		 <a href="#" data-rel="back" data-icon="carat-l" data-iconpos="notext">Back</a> 
+         <h1>5 year Bottomlines</h1>
+         <a href="#fivebot-help"  class="ui-btn-right" id="open_popup" data-role="button" data-transition="pop" data-position-to="window" 
+         data-rel="popup">Help</a>
+                   <div data-role="popup" id="fivebot-help">
+                       <div data-role="content">
+                          <b>See all examples of each catagory on page 11 of MS-workbook. </b>		
+								<p><i><b>BEING:</b></i> Whatever nourishes your spirit and enhances your feeling of 
+								        contribution and connetedness -feeling "whole",
+										we are likely to have the internal propulsion to fully live our purpose. 
+                                </p>
+          
+								<p><i><b>BODY:</b></i> Maintaining the vitality of the vessel of our life journey - ensuring
+								         we have the energy 
+                                         and physical wherewithal to sustain our life purpose. 
+                                </p>
+          
+								<p><i><b>BRAIN:</b></i> The intellectual skills and abilities required to pilot a course to 
+										our purpose.
+								</p>
+          
+								<p><i><b>PEOPLE:</b></i> The relationships that support us, and pull out our best--consort 
+										battleships for our purpose,
+										not millstones around our neck--such relationships oxygenate our purpose.
+								</p>
+          
+								<p><i><b>TIME:</b></i> The way spend our most precious resource--in 5 years how our purpose 
+										will determine that we spend
+										our time  differently.
+								</p>
+          
+								<p><i><b>MONEY:</b></i>: The resources required by our purpose.</p><br> <br>
+        
+						<a href="#foo" class="ui-btn" data-rel="close">Ok! I got it</a>
+                       
+                       </div> <!--content-->
+                   
+                   
+                   </div> <!--popup-->
+           
+       </header>
+               
+       <div class="ui-content">
+       
+          <form method="get" action="five-bot.php">
+			  <p>1. BEING (What nourishes your spirit?) </p>
+			  <textarea id="being-fiveBot"></textarea>
+			  <input data-inline="true" value="Submit" type="submit">
+			  
+			 
+			  
+			  <p>2. BODY (The vessel for the journey) </p>
+			  <textarea id="body-fiveBot"></textarea>
+			  <input data-inline="true" value="Submit" type="submit">
+			  
+
+			  <p>3. BRAIN (Increasing knowledge and intellectual skills)</p>
+			  <textarea id="brain-fiveBot"></textarea>
+			  <input data-inline="true" value="Submit" type="submit">
+			  
+			  <p>4. PEOPLE (The quality and nature of your relationship)</p>
+			  <textarea id="people-fiveBot"></textarea>
+			  <input data-inline="true" value="Submit" type="submit">
+			 
+			  
+			  <p>5. TIME (How you spend your life?)</p>
+			  <textarea id="time-fiveBot"></textarea>
+			  <input data-inline="true" value="Submit" type="submit">
+			  
+
+			  <p>6. MONEY (What it takes to support your purpose?)</p>
+			  <textarea id="money-fiveBot"></textarea>
+			  <input data-inline="true" value="Submit" type="submit">
+			  <a href="#onebot-page" class="ui-btn ui-btn-inline">Next</a>
+          </form>
+            
+            
+       </div>
+       
+    </div> <!--end of fifth page as five year bottomlines-->
+    
+    <div id="fivebot-help" data-role="page">
+        <div data-role="header">
+			
+        </div>
+        <div class="ui-content">
+	      <b>See all examples of each catagory on page 11 of MS-workbook. </b>		
+          <p><i><b>BEING:</b></i> Whatever nourishes your spirit and enhances your feeling of contribution and connetedness -feeling "whole",
+          we are likely to have the internal propulsion to fully live our purpose. 
+          </p>
+          
+          <p><i><b>BODY:</b></i> Maintaining the vitality of the vessel of our life journey - ensuring we have the energy 
+          and physical wherewithal to sustain our life purpose. 
+          </p>
+          
+          <p><i><b>BRAIN:</b></i> The intellectual skills and abilities required to pilot a course to our purpose.
+          </p>
+          
+          <p><i><b>PEOPLE:</b></i> The relationships that support us, and pull out our best--consort battleships for our purpose,
+          not millstones around our neck--such relationships oxygenate our purpose.</p>
+          
+          <p><i><b>TIME:</b></i> The way spend our most precious resource--in 5 years how our purpose will determine that we spend
+          our time  differently.</p>
+          
+          <p><i><b>MONEY:</b></i>: The resources required by our purpose.</p>
+        
+          <a href="#" class="ui-btn" data-rel="back">Ok! I got it</a>
+        </div>
+    </div>
+      
+      <div id="onebot-page" data-role="page">
+           <header data-role="header" data-position="fixed">
+			   <a href="#" data-rel="back" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-l ui-btn-icon-left ui-btn-icon-notext">Back</a>
+               <h1>One month Bottomlines</h1>
+           
+           </header>
+           <div class="ui-content">
+			   <form method="get" action="one-bot.php">
+				  <p>1. BEING (What nourishes your spirit?)</p>
+				  <textarea id="being-oneBot"></textarea>
+				  <input data-inline="true" value="Submit" type="submit">
+			      
+				  
+				  
+				  <p>2. BODY (The vessel for the journey)</p>
+				  <textarea id="body-oneBot"></textarea>
+				  <input data-inline="true" value="Submit" type="submit">
+				
+
+				  <p>3. BRAIN (Increasing knowledge and intellectual skills)</p>
+				  <textarea id="brain-oneBot"></textarea>
+				  <input data-inline="true" value="Submit" type="submit">
+			      
+
+				  <p>4. PEOPLE (The quality and nature of your relationship)</p>
+				  <textarea id="people-oneBot"></textarea>
+				  <input data-inline="true" value="Submit" type="submit">
+			     
+				  
+				  <p>5. TIME (How you spend your life?)</p>
+				  <textarea id="time-oneBot"></textarea>
+				  <input data-inline="true" value="Submit" type="submit">
+			      
+
+				  <p>6. MONEY (What it takes to support your purpose?)</p>
+				  <textarea id="money-oneBot"></textarea>
+				  <input data-inline="true" value="Submit" type="submit">
+			      <a href="#timeline" class="ui-btn ui-btn-inline">Next</a>
+              </form>
+              
+           </div> 
+           
+                 
+      </div>  <!-- end of sixthpage as one month bottomlines -->
+      
+      <div id="timeline" data-role="page" data-dialog="true" data-close-btn="none">
+          <header data-role="header">
+             <h1>Timeline</h1>
+          </header>
+          <div class="ui-content" >
+               <h3>Enter your Birthday and Deathday</h3>
+               <form method="get" action="bd.php">
+				   <label for="birthday">Birthday:</label>
+				   <input type="text" name="birthday" id="birthday" value="" placeholder="01/01/1996">
+<!--
+				   <input data-role="date" type="text" name="birthday" id="birthday" value="" placeholder="01/01/1996">
+-->
+				   
+				   <label for="deathday">Deathday:</label>
+				   <input type="text" name="deathday" id="deathday" value="" placeholder="01/01/2040">
+<!--
+				   <input data-role="date" type="text" name="deathday" id="deathday" value="" placeholder="01/01/2040">
+-->
+				   
+				   
+				   
+               
+                   <input data-inline="true" value="Submit" type="submit">
+                  <!--      <p><a href="#seventhpage">Skip</a></p> -->
+                   
+                   <a href="#home" class="ui-btn ui-btn-inline">Next</a></p>
+                   
+               </form>
+               
+
+          </div>
+      
+      </div> <!--end of seventh page as asking usr for Bday-->
+
+     <div id="home" data-role="page" data-url="home" class="jqm-demos ui-responsive-panel" data-title="Home">
+          <header data-role="header" data-position="fixed">
+             
+             <h1>Home/Daily Habits</h1>
+             <a href="#nav-panel-home" data-icon="bars" data-iconpos="notext">Menu</a>
+             <a href="#add-form" data-icon="search" data-iconpos="notext">Search</a>
+             
+ <!--             <a href="#search-page" class="ui-btn ui-icon-search ui-btn-icon-left">Search</a>
+
+             <form action="#">
+				<label for="search" class="ui-hidden-accessible">Search</label>
+			    <input id="search" name="search" type="search" >
+             </form>
+-->
+          </header>
+          
+          <div class="ui-content jqm-content jqm-fullwidth">
+            <div class="daily-content">
+            <p>You have 8396 days(depending on timeline) are left.</p> <!--it will fetch data from the user's timeline-->
+			
+			<form method="get" action="daily-habits.php">
+			   <fieldset data-role="controlgroup">
+				  <legend>1. POWER HOUR 
+				          <a href="#pwhr" id="open_popup" class="ui-btn ui-btn-inline ui-icon-question ui-btn-icon-notext ui-corner-all" 
+				          data-rel="popup" data-transition="pop" data-position-to="window"></a>
+				          <div data-role="popup" id="pwhr">
+							  <div data-role="header">
+							      <h1>Power Hour</h1>
+							  </div>
+				               <div data-role="content">
+				                   <p>Power hour has three components and despite the name, can be done in about
+				                                ten minutes first thing in the morning. The first component involves reading 
+				                                your purpose statement. Secondly, review your five year and one month bottomlines.
+				                                Finally do a preplay or take 1.(2 pts.)
+				                                 <br>
+				                                
+				                                <b>See Page 16 on MS-workbook & Page 3 on "NLP playshop sheet".</b>
+				                    </p>
+				                    <a href="#foo" class="ui-btn" data-rel="close">Ok! I got it</a>
+				               </div>
+				          </div>  <!--content-->
+				                       
+				  
+				  </legend>
+				  <label for="purpose-cb1">Purpose</label>
+				  <input type="checkbox" name="purpose" id="purpose-cb1" />
+				  
+				   <label for="preplay-cb2">Planning/Take 1/ Preplay</label>
+				  <input type="checkbox" name="preplay" id="preplay-cb2" />
+
+				</fieldset>
+			    
+			    <fieldset data-role="controlgroup">
+				  <legend>2. Feared Things First 
+				           <a href="#ftf" id="open_popup" class="ui-btn ui-btn-inline ui-icon-question ui-btn-icon-notext ui-corner-all" 
+				          data-rel="popup" data-transition="pop" data-position-to="window"></a>
+				          <div data-role="popup" id="ftf">
+							   <div data-role="header">
+							      <h1>FTF</h1>
+							   </div>
+				               <div data-role="content">
+				                   <p>You can get point by overcoming your fear.(1 pt.) <br><br>
+				                                
+				                                <b>See Page 16 on MS-workbook & Page 3 on "NLP playshop sheet".</b>
+				                    </p>
+				                    <a href="#foo" class="ui-btn" data-rel="close">Ok! I got it</a>
+				               </div>
+				          </div>  <!--content-->
+				  
+				  </legend>
+				  <label for="ftf-cb3">FTF</label>
+				  <input type="checkbox" name="ftf" id="ftf-cb3" />
+				</fieldset>
+				
+				<fieldset data-role="controlgroup">
+				  <legend>3. BOTTOMLINES
+							 <a href="#botln" id="open_popup" class="ui-btn ui-btn-inline ui-icon-question ui-btn-icon-notext ui-corner-all" 
+				          data-rel="popup" data-transition="pop" data-position-to="window"></a>
+				          <div data-role="popup" id="botln">
+							   <div data-role="header">
+							      <h1>Bottom Lines</h1>
+							   </div>
+				               <div data-role="content">
+				                   <p>You can earn points for doing self, other and work.(3 pts.)  <br><br>
+				                                
+				                                <b>See Page 16 on MS-workbook & Page 3 on "NLP playshop sheet".</b>
+				                    </p>
+				                    <a href="#foo" class="ui-btn" data-rel="close">Ok! I got it</a>
+				               </div>
+				          </div>  <!--content-->
+				  
+				  
+				  </legend>
+				  <label for="self-cb4">Self</label>
+				  <input type="checkbox" name="self" id="self-cb4" />
+				  
+				  <label for="others-cb5">Others</label>
+				  <input type="checkbox" name="others" id="others-cb5" />
+				  
+				  <label for="work-cb6">Work</label>
+				  <input type="checkbox" name="work" id="work-cb6" />
+				</fieldset>
+				
+				<fieldset data-role="controlgroup">
+				  <legend>4. NRG
+				           <a href="#nrg" id="open_popup" class="ui-btn ui-btn-inline ui-icon-question ui-btn-icon-notext ui-corner-all" 
+				          data-rel="popup" data-transition="pop" data-position-to="window"></a>
+				          <div data-role="popup" id="nrg">
+							   <div data-role="header">
+							      <h1>NRG</h1>
+							   </div>
+				               <div data-role="content">
+				                   <p>NRG stands for "energy", the components of which are adequate rest, nutrition and
+				                      exercise. For taking good care of the vessel for our life journey, you earn these points.(2 pts.)
+				                       
+				                   <br><br>
+				                                
+				                                <b>See Page 16 on MS-workbook & Page 3 on "NLP playshop sheet".</b>
+				                    </p>
+				                    <a href="#foo" class="ui-btn" data-rel="close">Ok! I got it</a>
+				               </div>
+				          </div>  <!--content-->
+				  
+				  
+				  </legend>
+				  <label for="rest-cb7">Rest</label>
+				  <input type="checkbox" name="rest" id="rest-cb7" />
+				  
+				  <label for="nutrition-cb8">Nutrition</label>
+				  <input type="checkbox" name="nutrition" id="nutrition-cb8" />
+				  
+				  <label for="exercise-cb9">Work</label>
+				  <input type="checkbox" name="exercise" id="exercise-cb9" />
+				</fieldset>
+				
+				<fieldset data-role="controlgroup">
+				  <legend>5. Mentor Others
+				           <a href="#ment" id="open_popup" class="ui-btn ui-btn-inline ui-icon-question ui-btn-icon-notext ui-corner-all" 
+				          data-rel="popup" data-transition="pop" data-position-to="window"></a>
+				          <div data-role="popup" id="ment">
+							   <div data-role="header">
+							      <h1>Mentoring</h1>
+							   </div>
+				               <div data-role="content">
+				                   <p>It is easiar to feel valuable when we make a habit of giving value to others.
+				                      You get this point for helping someone out, listening with compassion, or teaching an important
+				                      life skill.(1 pts.)
+				                      <br><br>
+				                                
+				                                <b>See Page 16 on MS-workbook & Page 3 on "NLP playshop sheet".</b>
+				                    </p>
+				                    <a href="#foo" class="ui-btn" data-rel="close">Ok! I got it</a>
+				               </div>
+				          </div>  <!--content-->
+				  
+				  
+				  </legend>
+				  <label for="mentoring-cb10">Mentoring</label>
+				  <input type="checkbox" name="mentoring" id="mentoring-cb10" />
+				</fieldset>
+			    
+			    <fieldset data-role="controlgroup">
+				  <legend>6. Learn something new
+				           <a href="#aha" id="open_popup" class="ui-btn ui-btn-inline ui-icon-question ui-btn-icon-notext ui-corner-all" 
+				          data-rel="popup" data-transition="pop" data-position-to="window"></a>
+				          <div data-role="popup" id="aha">
+							   <div data-role="header">
+							      <h1>AHA</h1>
+							   </div>
+				               <div data-role="content">
+				                   <p>This happens when we have an insight or another piece of life's puzzle falls into place.
+				                      You get this point for recording an insight or new idea you have had that day. If nothing occurs to you, 
+				                      then ask, "What have I learned today?" and answered that.(1 pt.)
+				                    <br><br>
+				                                
+				                                <b>See Page 16 on MS-workbook & Page 4 on "NLP playshop sheet".</b>
+				                    </p>
+				                    <a href="#foo" class="ui-btn" data-rel="close">Ok! I got it</a>
+				               </div>
+				          </div>  <!--content-->
+				  
+				  </legend>
+				  <label for="aha-cb11">AHA</label>
+				  <input type="checkbox" name="aha" id="aha-cb11" />
+				  
+				</fieldset>
+			    
+			    <fieldset data-role="controlgroup">
+				  <legend>7. Last Hour
+				            <a href="#repl" id="open_popup" class="ui-btn ui-btn-inline ui-icon-question ui-btn-icon-notext ui-corner-all" 
+				          data-rel="popup" data-transition="pop" data-position-to="window"></a>
+				          <div data-role="popup" id="repl">
+							   <div data-role="header">
+							      <h1>Replay</h1>
+							   </div>
+				               <div data-role="content">
+				                   <p> Replay the whole day's activities in your mind regarding that day's challenges and see how you did. (1 pt.)<br><br>
+				                                
+				                                <b>See Page 16 on MS-workbook & Page 4 on "NLP playshop sheet".</b>
+				                    </p>
+				                    <a href="#foo" class="ui-btn" data-rel="close">Ok! I got it</a>
+				               </div>
+				          </div>  <!--content-->
+				  
+				  </legend>
+				  <label for="replay-cb12">TAKE2/REPLAY</label>
+				  <input type="checkbox" name="replay" id="replay-cb12" />
+				</fieldset>
+			    
+			    <input value="Submit" type="submit">
+			    
+			</form>
+             
+            </div>         
+          </div> <!-- end of content-->
+          
+          <div data-role="panel" data-display="overlay" data-theme="b" id="nav-panel-home">
+			  <ul data-role="listview">
+			   <li data-icon="delete"><a href="#" data-rel="close">Close menu</a></li> 
+					<li><a href="#" data-rel="close">Home</a></li>
+					<li><a href="#purpose">PURPOSE</a></li>
+					<li><a href="#bottomlines">BOTTOMLINES</a></li>
+					<li><a href="#games">GAMES</a></li>
+					<li><a href="#performance">PERFORMANCE</a></li>
+					<li><a href="#friends">FRIENDS</a></li>
+					<li><a href="#help">HELP</a></li>
+					<li><a href="#settings">SETTINGS</a></li>
+			 </ul>
+         </div><!-- /panel -->
+         
+       <div data-role="panel" data-position="right" data-display="overlay" data-theme="a" id="add-form">
+		   <form>
+            <div class="ui-input-search ui-body-inherit ui-corner-all ui-shadow-inset ui-input-has-clear">
+              <input data-type="search" data-enhanced="true" data-inset="false" id="pre-rendered-example-input" placeholder="Filter items..." value="">
+            </div>
+           <div data-role="controlgroup" data-enhanced="true" data-filter="true" data-filter-reveal="true" data-input="#pre-rendered-example-input" class="ui-controlgroup ui-controlgroup-vertical ui-corner-all">
+          <div class="ui-controlgroup-controls">
+            <a href="#purpose" class="ui-btn ui-corner-all ui-shadow ui-shadow ui-screen-hidden">Purpose Statement</a>
+            <a href="#purpose" class="ui-btn ui-corner-all ui-shadow ui-first-child ui-shadow ui-last-child ui-screen-hidden">Purpose Sentence</a>
+            <a href="#bottomlines" class="ui-btn ui-corner-all ui-shadow ui-shadow ui-screen-hidden">Bottomlines</a>
+          </div>
+       </div>
+</form>
+<!--
+           <ul data-role="listview" data-filter-placeholder="Find cars..." data-filter-theme="a" data-inset="true">
+				<li>Purpose statement</li>
+				<li>Purpose sentence</li>
+				<li>Bottomlines</li>
+				<li>Cadillac</li>
+				<li>Ferrari</li>
+			</ul>
+-->
+       </div><!-- /panel -->
+     </div>  <!-- end of Home page or Eighth page-->
+    
+    <div id="purpose" data-role="page" data-url="purpose" class="jqm-demos ui-responsive-panel" data-title="Purpose">
+       <header data-role="header">
+         <h1>Purpose</h1> 
+          <a href="#nav-panel-purpose" data-icon="bars" data-iconpos="notext">Menu</a>
+       </header>
+       <div class="ui-content" >
+              <div data-role="collapsible-set">
+				 <div data-role="collapsible" data-collapsed-icon="carat-d" data-expanded-icon="carat-u" data-iconpos="right">
+                     <h1>Purpose sentence</h1>
+                     <p>
+                     <form method="get" action="pse.php">
+                        <textarea id="pse-menu"></textarea>
+                        <input data-inline="true" value="Submit" type="submit">
+                     </form>
+                     </p>
+                  </div> 
+                 <div data-role="collapsible" data-collapsed-icon="carat-d" data-expanded-icon="carat-u" data-iconpos="right">
+                     <h1>Purpose statement</h1>
+                     <p>
+                     <form method="get" action="pst.php">
+                        <textarea id="pst-menu"></textarea>
+                        <input data-inline="true" value="Submit" type="submit">
+                     </form>
+                     </p>
+                  </div>
+                  <div data-role="collapsible" data-collapsed-icon="carat-d" data-expanded-icon="carat-u" data-iconpos="right">
+                    <h1>Purpose mission statement</h1>
+                    <p>
+                     <form method="get" action="ps-mission.php">
+                        <textarea id="ps-mission-menu"></textarea>
+                        <input data-inline="true" value="Submit" type="submit">
+                     </form>
+                    </p>
+                  </div>
+                  <div data-role="collapsible" data-collapsed-icon="carat-d" data-expanded-icon="carat-u" data-iconpos="right">
+                    <h1>Purpose finder exercise</h1>
+                    <p>
+					<div data-role="collapsible-set">
+						<div data-role="collapsible" data-collapsed="false" data-collapsed-icon="carat-d" data-expanded-icon="carat-u" data-iconpos="right">	
+							<h2>1. What do I love to do?</h2>
+							  <form method="get" action="psfe.php">
+						         <textarea id="love" placeholder=" What do I enjoy, what do I look forward to, what is my secret dream? "></textarea>
+						         <input data-inline="true" value="Submit" type="submit">
+						      </form>
+						</div> <!-- End of what-I-love collapsible -->
+						<div data-role="collapsible" data-collapsed-icon="carat-d" data-expanded-icon="carat-u" data-iconpos="right">	
+							<h2>2. What am I good at?</h2>
+							  <form method="get" action="psfe.php">
+						         <textarea id="good-at" placeholder=" What do people raise me for, where have I excelled in the past, what are my natural talents? "></textarea>
+						         <input data-inline="true" value="Submit" type="submit">
+						      </form>
+						</div> <!-- End of what-am-I-good-at collapsible -->
+						<div data-role="collapsible" data-collapsed-icon="carat-d" data-expanded-icon="carat-u" data-iconpos="right">	
+							<h2>3. What is important to me?</h2>
+							  <form method="get" action="psfe.php">
+						         <textarea id="important" placeholder=" What do I stand for, what won't I stand for, what would I stand for? "></textarea>
+						         <input data-inline="true" value="Submit" type="submit">
+						      </form>
+						</div> <!-- End of what-am-I-good-at collapsible -->
+                     </div> <!-- End of nested collapsible-set-->
+                    </p>
+                  </div> <!--end of ps-finder collapsible -->
+                  
+              </div> <!--end of main-collapsible-set-->
+         
+       </div>
+       <div data-role="panel" data-display="overlay" data-theme="b" id="nav-panel-purpose">
+			  <ul data-role="listview">
+			     <li data-icon="delete"><a href="#" data-rel="close">Close menu</a></li> 
+					<li><a href="#home">Home</a></li>
+					<li><a href="#" data-rel="close">PURPOSE</a></li>
+					<li><a href="#bottomlines">BOTTOMLINES</a></li>
+					<li><a href="#games">GAMES</a></li>
+					<li><a href="#performance">PERFORMANCE</a></li>
+					<li><a href="#friends">FRIENDS</a></li>
+					<li><a href="#help">HELP</a></li>
+					<li><a href="#settings">SETTINGS</a></li>
+			 </ul>
+         </div><!-- /panel -->
+    </div> <!-- End of Purpose page-->
+    
+    <div id="bottomlines" data-role="page" data-url="bottomlines" class="jqm-demos ui-responsive-panel" data-title="Bottomlines">
+       <header data-role="header">
+         <h1>Bottomlines</h1> 
+          <a href="#nav-panel-bottomlines" data-icon="bars" data-iconpos="notext">Menu</a>
+       </header>
+       <div class="ui-content" >
+            <p><a href="#fivebot-page" class="ui-btn ui-icon-carat-r ui-btn-icon-right"> 5 year bottomlines</a></p>
+            <p><a href="#onebot-page" class="ui-btn ui-icon-carat-r ui-btn-icon-right"> One month bottomlines</a></p>
+      
+       </div>
+       <div data-role="panel" data-display="overlay" data-theme="b" id="nav-panel-bottomlines">
+			  <ul data-role="listview">
+			   <li data-icon="delete"><a href="#" data-rel="close">Close menu</a></li> 
+					<li><a href="#home">Home</a></li>
+					<li><a href="#purpose">PURPOSE</a></li>
+					<li><a href="#"  data-rel="close">BOTTOMLINES</a></li>
+					<li><a href="#games">GAMES</a></li>
+					<li><a href="#performance">PERFORMANCE</a></li>
+					<li><a href="#friends">FRIENDS</a></li>
+					<li><a href="#help">HELP</a></li>
+					<li><a href="#settings">SETTINGS</a></li>
+			 </ul>
+         </div><!-- /panel -->
+    </div> <!-- End of Bottomlines Page -->
+    
+    <div id="games" data-role="page" data-url="games" class="jqm-demos ui-responsive-panel" data-title="Games">
+       <header data-role="header">
+         <h1>Games</h1> 
+          <a href="#nav-panel-games" data-icon="bars" data-iconpos="notext">Menu</a>
+       </header>
+       <div class="ui-content" >
+            Hi its Games Page Test
+         
+       </div>
+       <div data-role="panel" data-display="overlay" data-theme="b" id="nav-panel-games">
+			  <ul data-role="listview">
+			   <li data-icon="delete"><a href="#" data-rel="close">Close menu</a></li> 
+					<li><a href="#home">Home</a></li>
+					<li><a href="#purpose">PURPOSE</a></li>
+					<li><a href="#bottomlines">BOTTOMLINES</a></li>
+					<li><a href="#" data-rel="close">GAMES</a></li>
+					<li><a href="#performance">PERFORMANCE</a></li>
+					<li><a href="#friends">FRIENDS</a></li>
+					<li><a href="#help">HELP</a></li>
+					<li><a href="#settings">SETTINGS</a></li>
+			 </ul>
+         </div><!-- /panel -->
+    </div> <!-- end of Games page -->
+    
+    
+     <div id="performance" data-role="page" data-url="performance" class="jqm-demos ui-responsive-panel" data-title="Performance">
+       <header data-role="header">
+         <h1>Performance</h1> 
+          <a href="#nav-panel-performance" data-icon="bars" data-iconpos="notext">Menu</a>
+       </header>
+       <div class="ui-content" >
+            Hi its Performance Page Test
+         
+       </div>
+       <div data-role="panel" data-display="overlay" data-theme="b" id="nav-panel-performance">
+			  <ul data-role="listview">
+			   <li data-icon="delete"><a href="#" data-rel="close">Close menu</a></li> 
+					<li><a href="#home">Home</a></li>
+					<li><a href="#purpose">PURPOSE</a></li>
+					<li><a href="#bottomlines">BOTTOMLINES</a></li>
+					<li><a href="#games" >GAMES</a></li>
+					<li><a href="#" data-rel="close">PERFORMANCE</a></li>
+					<li><a href="#friends">FRIENDS</a></li>
+					<li><a href="#help">HELP</a></li>
+					<li><a href="#settings">SETTINGS</a></li>
+			 </ul>
+         </div><!-- /panel -->
+     </div> <!-- end of Performance page -->
+     
+   <div id="friends" data-role="page" data-url="friends" class="jqm-demos ui-responsive-panel" data-title="Friends">
+       <header data-role="header">
+         <h1>Friends</h1> 
+          <a href="#nav-panel-friends" data-icon="bars" data-iconpos="notext">Menu</a>
+       </header>
+       <div class="ui-content" >
+            Hi its Friends Page Test
+         
+       </div>
+       <div data-role="panel" data-display="overlay" data-theme="b" id="nav-panel-friends">
+			  <ul data-role="listview">
+			   <li data-icon="delete"><a href="#" data-rel="close">Close menu</a></li> 
+					<li><a href="#home">Home</a></li>
+					<li><a href="#purpose">PURPOSE</a></li>
+					<li><a href="#bottomlines">BOTTOMLINES</a></li>
+					<li><a href="#games" >GAMES</a></li>
+					<li><a href="#performance">PERFORMANCE</a></li>
+					<li><a href="#" data-rel="close">FRIENDS</a></li>
+					<li><a href="#help">HELP</a></li>
+					<li><a href="#settings">SETTINGS</a></li>
+			 </ul>
+         </div><!-- /panel -->
+     </div> <!-- end of Friends page -->
+     
+    <div id="help" data-role="page" data-url="help" class="jqm-demos ui-responsive-panel" data-title="Help">
+       <header data-role="header">
+         <h1>Help</h1> 
+          <a href="#nav-panel-help" data-icon="bars" data-iconpos="notext">Menu</a>
+       </header>
+       <div class="ui-content" >
+            <div data-role="collapsible-set">
+				 <div data-role="collapsible" data-collapsed-icon="arrow-r" data-expanded-icon="arrow-d" data-iconpos="left">
+                     <h1>Purpose sentence</h1>
+                     <p>
+                       A goal is an outcome that can be achieved. A purpose is the reason why we wish to
+					achieve our goals, our motivation for getting them done. Purpose sentence is a sentence that can inspire you throughout the 
+					whole journey of your life. It could be a quote of your favourite or Ideal Person. 
+					<b>More examples are given on page 8-11 of MS-workbook.</b>
+					</p>
+                           
+                  </div> 
+                  <div data-role="collapsible" data-collapsed-icon="arrow-r" data-expanded-icon="arrow-d" data-iconpos="left">
+                     <h1>Purpose statement</h1>
+                     <p>
+                      Purpose is our reason for being, the generator of our values and goals. Since the only way to head off
+					   self sabotage or variable motivation behind each goal there and focusing what we love, what we are good at,
+					   and what is important to us, we should develop a statement that explains us to us, from the inside out an 
+					   internal snap shot of our core motivation.
+                       <b>More examples are given on page 8-11 of MS-workbook.</b>
+                       If you haven't find any purpose yet, you can find your purpose through the <a href="#pur-find">purpose finder exercise</a>.</p>
+					 </p>
+					</div>
+					
+						<div data-role="collapsible" data-collapsed-icon="arrow-r" data-expanded-icon="arrow-d" data-iconpos="left">
+							<h1>Bottom Lines</h1>
+							<p>
+                              Results or goals that would help us live our purpose. Since balance is a key ingredient in a happy, successful life,
+					          we can devide our lives into the catagories of being, body, brain, people, time & money. Goals or outcomes that 
+					          we dedicate ourselves to achieving in these categories will vary, but ensure that they are all represented. Select
+						      bottom lines for five years that are challenging and stimulating, and then coming month (in the same catagories).
+							  These one month goals should be a first step toward reaching the five year destination.
+							  <b>Find it on page 12-14 of MS-workbook.</b> </p>
+							</p>
+                          </div> 
+                           
+								 <div data-role="collapsible" data-collapsed-icon="arrow-r" data-expanded-icon="arrow-d" data-iconpos="left">
+									<h1>Five year and One month Bottom Lines</h1>
+									<p><b>See all examples of each catagory on page 11 of MS-workbook. </b></p>
+									<div class="ui-content">
+									 <p><i><b>BEING:</b></i> Whatever nourishes your spirit and enhances your feeling of contribution and connetedness -feeling "whole",
+                                              we are likely to have the internal propulsion to fully live our purpose. 
+                                          </p>
+                                     
+                                     
+									 <p><i><b>BODY:</b></i> Maintaining the vitality of the vessel of our life journey - ensuring we have the energy 
+                                                   and physical wherewithal to sustain our life purpose. 
+                                          </p>
+                                     
+                                     
+									 <p><i><b>BRAIN:</b></i> The intellectual skills and abilities required to pilot a course to our purpose.
+                                         </p>
+                                     
+                                     
+									 <p><i><b>PEOPLE:</b></i> The relationships that support us, and pull out our best--consort battleships for our purpose,
+                                                 not millstones around our neck-such relationships oxygenate our purpose.
+                                         </p>
+									 
+									 
+									 
+									 <p><i><b>TIME:</b></i> The way spend our most precious resource--in 5 years how our purpose will determine that we spend
+                                                  our time  differently.</p>
+                                     
+                                     
+									 <p><i><b>MONEY:</b></i>: The resources required by our purpose.</p>
+									 
+									</div><!--content-->
+                                   
+                                   
+                                 </div> <!--fivebot- collapse-->
+                                 
+                                 <div data-role="collapsible" data-collapsed-icon="arrow-r" data-expanded-icon="arrow-d" data-iconpos="left">
+									<h1>Daily Habits/Bottom Lines</h1>
+							         <p><b> See Page 16 on MS-workbook & Page 3 on "NLP playshop sheet".</b></p>
+									  <div class="ui-content">
+									      <p><i><b>Power Hour:</b></i> Power hour has three components and despite the name, can be done in about
+				                                ten minutes first thing in the morning. The first component involves reading 
+				                                your purpose statement. Secondly, review your five year and one month bottomlines.
+				                                Finally do a preplay or take 1.(2 pts.)</p>
+                                            
+                                     
+									 <p><i><b>FTF:</b></i> You can get point by overcoming your fear.(1 pt.)
+									                            
+                                          </p>
+                                     
+                                     
+									 <p><i><b>Bottomlines:</b></i> You can earn points for doing self, other and work.(3 pts.)  
+				                                
+				                               
+                                         </p>
+                                    
+                                     <p><i><b>NRG:</b></i> NRG stands for "energy", the components of which are adequate rest, nutrition and
+				                      exercise. For taking good care of the vessel for our life journey, you earn these points.(2 pts.)
+				                      
+                                         </p>
+									 
+									 
+									 
+									<p><i><b>Mentoring:</b></i> It is easiar to feel valuable when we make a habit of giving value to others.
+				                      You get this point for helping someone out, listening with compassion, or teaching an important
+				                      life skill.(1 pts.) 
+				                      
+				                    </p>            
+				                                
+                                          
+                                     
+                                     
+									 <p><i><b>AHA:</b></i>: This happens when we have an insight or another piece of life's puzzle falls into place.
+				                      You get this point for recording an insight or new idea you have had that day. If nothing occurs to you, 
+				                      then ask, "What have I learned today?" and answered that.(1 pt.)
+				                    </p>
+									 
+									
+									 
+									 <p><i><b>Replay:</b></i>: Replay the whole day's activities in your mind regarding that day's challenges and see how you did. (1 pt.)
+				                                
+				                                </p>
+									 
+									 
+									 
+                                   </div> <!--content-->
+									  
+									  
+									  
+					             </div>
+                                 
+								 
+                           
+                            
+                        
+                        
+                        
+                  
+                  
+                  
+              </div>  <!--Collapsible set 1-->
+         
+       </div>
+       <div data-role="panel" data-display="overlay" data-theme="b" id="nav-panel-help">
+			  <ul data-role="listview">
+			   <li data-icon="delete"><a href="#" data-rel="close">Close menu</a></li> 
+					<li><a href="#home">Home</a></li>
+					<li><a href="#purpose">PURPOSE</a></li>
+					<li><a href="#bottomlines">BOTTOMLINES</a></li>
+					<li><a href="#games" >GAMES</a></li>
+					<li><a href="#performance">PERFORMANCE</a></li>
+					<li><a href="#friends">FRIENDS</a></li>
+					<li><a href="#" data-rel="close">HELP</a></li>
+					<li><a href="#settings">SETTINGS</a></li>
+			 </ul>
+         </div><!-- /panel -->
+     </div> <!-- end of Help page -->
+     
+   <div id="settings" data-role="page" data-url="settings" class="jqm-demos ui-responsive-panel" data-title="Settings">
+       <header data-role="header">
+         <h1>Settings</h1> 
+          <a href="#nav-panel-settings" data-icon="bars" data-iconpos="notext">Menu</a>
+       </header>
+       <div class="ui-content" >
+            Hi its Settings Page Test
+         
+       </div>
+       <div data-role="panel" data-display="overlay" data-theme="b" id="nav-panel-settings">
+			  <ul data-role="listview">
+			   <li data-icon="delete"><a href="#" data-rel="close">Close menu</a></li> 
+					<li><a href="#home">Home</a></li>
+					<li><a href="#purpose">PURPOSE</a></li>
+					<li><a href="#bottomlines">BOTTOMLINES</a></li>
+					<li><a href="#games" >GAMES</a></li>
+					<li><a href="#performance">PERFORMANCE</a></li>
+					<li><a href="#friends">FRIENDS</a></li>
+					<li><a href="#help">HELP</a></li>
+					<li><a href="#" data-rel="close">SETTINGS</a></li>
+			 </ul>
+         </div><!-- /panel -->
+     </div> <!-- end of Settings page -->
+     
+     
+     
+  
+     
+</body>
+</html>
+
+
+
+
+
+
+
+
+

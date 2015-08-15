@@ -1,0 +1,15 @@
+section{
+   background:url(../images/nice.jpg) !important;
+   
+}
+section .welcome h1{
+   text-align:center;
+   color:#fff;
+}
+section .welcome p{
+   text-align:right;
+}
+
+section .welcome p > a{
+   color:#fff;
+}
